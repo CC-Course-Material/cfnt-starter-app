@@ -16,7 +16,9 @@ const theme = {
     },
   },
   fonts: {
-    default: '"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif',
+    default: 'Raleway, Helvetica Neue, Helvetica, Arial, sans-serif',
+    heading: 'Raleway, Helvetica Neue, Helvetica, Arial, sans-serif',
+    mono: 'Raleway, Helvetica Neue, Helvetica, Arial, sans-serif',
   },
 };
 
