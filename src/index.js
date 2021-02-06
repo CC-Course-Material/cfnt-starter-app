@@ -7,7 +7,13 @@ import LandingPage from './routes/Landing';
 const theme = {
   palette: {
     primary: '#47b475',
-    secondary: '#66777',
+    secondary: '#292929',
+    Button: {
+      defaultProps: {
+        palette: 'primary',
+        color: 'white',
+      },
+    },
   },
   fonts: {
     default: '"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif',

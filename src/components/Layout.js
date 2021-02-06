@@ -9,10 +9,8 @@ const Layout = ({ children }) => {
         <TopNav>
           <TopNav.Section>
             <TopNav.Item fontWeight="semibold">
-              <img src={logo} style={{ height: 35, paddingLeft: 16 }} />
+              <img src={logo} style={{ height: 35, marginLeft: '1rem' }} />
             </TopNav.Item>
-            <TopNav.Item href="#">Get started</TopNav.Item>
-            <TopNav.Item href="#">Components</TopNav.Item>
           </TopNav.Section>
           <TopNav.Section marginRight="major-2">
             <TopNav.Item>
@@ -21,12 +19,14 @@ const Layout = ({ children }) => {
               </Button>
             </TopNav.Item>
             <TopNav.Item>
-              <Button palette="primary">Login</Button>
+              <Button palette="primary" style={{ color: 'white' }}>
+                Login
+              </Button>
             </TopNav.Item>
           </TopNav.Section>
         </TopNav>
       }
-      border="default"
+      border="none"
     >
       {children}
     </PageWithHeader>
