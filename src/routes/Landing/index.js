@@ -17,13 +17,13 @@ const Card = styled(Flex)`
   flex: 1;
   margin: 16px;
   margin-top: 0;
-  min-width: 200px;
   justify-content: center;
   padding: 24px;
   flex-direction: column;
 `;
 
 const CardContainer = styled(Flex)`
+  box-sizing: border-box;
   ${breakpoint(
     'max-tablet',
     css`
@@ -37,7 +37,7 @@ const LandingPage = () => {
 
   const iconStyles = {
     color: theme.palette.primary,
-    fontSize: 48,
+    fontSize: 64,
     textAlign: 'center',
   };
 
@@ -64,15 +64,15 @@ const LandingPage = () => {
           Sign up
         </Button>
       </Box>
-      <CardContainer
-        marginY="major-10"
-        width="100%"
-        maxWidth="1000px"
-        marginX="auto"
-      >
+      <CardContainer marginY="major-10" marginX="10%">
         <Card>
           <i className="ti-wand ti" style={iconStyles} />
-          <Text textAlign="center" marginY="16px">
+          <Text
+            textAlign="center"
+            marginY="16px"
+            letterSpacing="2px"
+            fontWeight="500"
+          >
             MADE TO ORDER
           </Text>
           <Text textAlign="justify" fontSize="14px">
@@ -84,7 +84,12 @@ const LandingPage = () => {
         </Card>
         <Card>
           <i className="ti-timer ti" style={iconStyles} />
-          <Text textAlign="center" marginY="16px">
+          <Text
+            textAlign="center"
+            marginY="16px"
+            letterSpacing="2px"
+            fontWeight="500"
+          >
             PROMPT DELIVERY
           </Text>
           <Text textAlign="justify" fontSize="14px">
@@ -96,7 +101,12 @@ const LandingPage = () => {
 
         <Card>
           <i className="ti-comments ti" style={iconStyles} />
-          <Text textAlign="center" marginY="16px">
+          <Text
+            textAlign="center"
+            marginY="16px"
+            letterSpacing="2px"
+            fontWeight="500"
+          >
             CONSTANT SUPPORT
           </Text>
           <Text textAlign="justify" fontSize="14px">
@@ -106,6 +116,68 @@ const LandingPage = () => {
           </Text>
         </Card>
       </CardContainer>
+      <Flex paddingY="major-16" paddingX="10%" backgroundColor="#f8f8f8">
+        <Flex
+          flexWrap="wrap"
+          flexDirection="row"
+          maxWidth="800px"
+          margin="auto"
+        >
+          <Box
+            flex="2"
+            minWidth="300px"
+            paddingRight="32px"
+            boxSizing="border-box"
+            marginBottom="24px"
+          >
+            <Heading fontSize="500" fontWeight="300" marginBottom="24px">
+              Order today
+            </Heading>
+            <Text>
+              We are only working with a handful of clients to ensure that our
+              service exceeds expectations. Be part of the modern way to get
+              coffee. With Caffeinate, you can get your favorite coffee, any
+              time, anywhere. Order now.
+            </Text>
+          </Box>
+
+          <Flex
+            backgroundColor={theme.palette.primary}
+            flex="1"
+            minWidth="300px"
+            height="338px"
+            alignItems="center"
+            flexDirection="column"
+            color="white"
+          >
+            <Heading
+              marginTop="56px"
+              fontFamily="Lato"
+              fontWeight="300"
+              fontSize="900"
+            >
+              $2
+            </Heading>
+            <Text fontFamily="Lato" marginBottom="20px">
+              Fee Per Cup
+            </Text>
+            <Button palette="primary" variant="outlined">
+              Join now
+            </Button>
+            <Text fontFamily="Lato" marginTop="20px">
+              Tip included
+            </Text>
+          </Flex>
+        </Flex>
+      </Flex>
+      <Box
+        paddingY="major-5"
+        paddingX="5%"
+        backgroundColor="secondary"
+        color="white"
+      >
+        {`© Copyright ${new Date().getFullYear()} - Caffeinate`}
+      </Box>
     </Layout>
   );
 };
