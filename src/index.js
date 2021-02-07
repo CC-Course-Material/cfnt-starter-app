@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider as BumbagProvider, css } from 'bumbag';
+import { Provider as BumbagProvider } from 'bumbag';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import LandingPage from './routes/Landing';
 
@@ -26,7 +27,15 @@ class App extends React.Component {
   render() {
     return (
       <BumbagProvider theme={theme}>
-        <LandingPage />
+        <Router>
+          <Switch>
+            <Route path="/login">foo</Route>
+            <Route path="/signup">bar</Route>
+            <Route path="/">
+              <LandingPage />
+            </Route>
+          </Switch>
+        </Router>
       </BumbagProvider>
     );
   }
