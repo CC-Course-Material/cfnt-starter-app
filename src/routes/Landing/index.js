@@ -15,7 +15,6 @@ import Layout from '../../components/Layout';
 const Card = styled(Flex)`
   background-color: #f8f8f8;
   flex: 1;
-  margin: 16px;
   margin-top: 0;
   justify-content: center;
   padding: 24px;
@@ -82,7 +81,7 @@ const LandingPage = () => {
             you.
           </Text>
         </Card>
-        <Card>
+        <Card marginX="32px">
           <i className="ti-timer ti" style={iconStyles} />
           <Text
             textAlign="center"
