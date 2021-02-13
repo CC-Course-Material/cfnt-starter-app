@@ -2,9 +2,9 @@ import React from 'react';
 import { InputField } from 'bumbag';
 import AuthLayout from '../../components/AuthLayout';
 
-const Login = () => {
+const Signup = () => {
   return (
-    <AuthLayout buttonText="Login" title="Login">
+    <AuthLayout buttonText="Sign up" title="Sign up">
       <InputField
         label="Username"
         placeholder="Enter your username here..."
@@ -15,6 +15,13 @@ const Login = () => {
         label="Password"
         placeholder="Enter your password here..."
         marginTop="18px"
+        type="password"
+        width="100%"
+      />
+      <InputField
+        label="Repeat password"
+        placeholder="Repeat your password here..."
+        marginTop="18px"
         marginBottom="16px"
         type="password"
         width="100%"
@@ -23,4 +30,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

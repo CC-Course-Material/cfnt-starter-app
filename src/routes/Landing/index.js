@@ -10,6 +10,8 @@ import {
   useTheme,
   Text,
 } from 'bumbag';
+import { Link } from 'react-router-dom';
+
 import Layout from '../../components/Layout';
 
 const Card = styled(Flex)`
@@ -59,9 +61,12 @@ const LandingPage = () => {
         >
           Sign up now
         </Heading>
-        <Button palette="primary" style={{ color: 'white' }}>
-          Sign up
-        </Button>
+
+        <Link to="/signup" style={{ textDecoration: 'none' }}>
+          <Button palette="primary" style={{ color: 'white' }}>
+            Sign up
+          </Button>
+        </Link>
       </Box>
       <CardContainer marginY="major-10" marginX="10%">
         <Card>
@@ -160,9 +165,11 @@ const LandingPage = () => {
             <Text fontFamily="Lato" marginBottom="20px">
               Fee Per Cup
             </Text>
-            <Button palette="primary" variant="outlined">
-              Join now
-            </Button>
+            <Link to="/signup" style={{ textDecoration: 'none' }}>
+              <Button palette="primary" variant="outlined">
+                Join now
+              </Button>
+            </Link>
             <Text fontFamily="Lato" marginTop="20px">
               Tip included
             </Text>

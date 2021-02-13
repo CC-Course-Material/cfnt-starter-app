@@ -4,6 +4,10 @@ import { Provider as BumbagProvider } from 'bumbag';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import LandingPage from './routes/Landing';
+import LoginPage from './routes/Login';
+import SignupPage from './routes/Signup';
+
+import './index.css';
 
 const theme = {
   palette: {
@@ -29,8 +33,12 @@ class App extends React.Component {
       <BumbagProvider theme={theme}>
         <Router>
           <Switch>
-            <Route path="/login">foo</Route>
-            <Route path="/signup">bar</Route>
+            <Route path="/login">
+              <LoginPage />
+            </Route>
+            <Route path="/signup">
+              <SignupPage />
+            </Route>
             <Route path="/">
               <LandingPage />
             </Route>
